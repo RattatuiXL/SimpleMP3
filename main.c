@@ -53,9 +53,9 @@ static void play(const char *path) {
     memset(&arg, 0, sizeof(arg));
     arg.mp3StreamStart = 0;
     arg.mp3StreamEnd   = size;
-    arg.mp3Buf         = mp3_in;
+    arg.mp3Buf         = (SceUChar8 *)mp3_in;
     arg.mp3BufSize     = IN_SZ;
-    arg.pcmBuf         = pcm_out;
+    arg.pcmBuf         = (SceUChar8 *)pcm_out;
     arg.pcmBufSize     = OUT_SZ;
 
     int h = sceMp3ReserveMp3Handle(&arg);
