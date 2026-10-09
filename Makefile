@@ -5,4 +5,4 @@ LIBS = -lpspmp3 -lpspaudio -lpsputility
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = Simple MP3
 PSPSDK = $(shell psp-config --pspsdk-path)
-include $(PSPSDK)/build.mak
+include $(PSPSDK)/lib/build.mak
